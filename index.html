@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Tennis Academy</title>
+    <!-- Linking Of CSS File And JS File. -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Table Tennis Academy</h1>
+    </header>
+
+    <nav>
+        <!-- Mobile Hamburger Toggle Menu -->
+        <button id="hamIcon">Open Menu</button>
+        <ul>
+            <li><button id="page1btn">How to Play</button></li>
+            <li><button id="page2btn">Health Benefits</button></li>
+            <li><button id="page3btn">Reflex Trainer</button></li>
+        </ul>
+    </nav>
+
+    <main id="pagecontainer">
+        <!-- SUBTOPIC 1: How To Play -->
+        <section class="page" id="page1">
+            <h2>How to Play Table Tennis</h2>
+            <div class="content-box">
+                <h3>Core Rules of the Game</h3>
+                <ul>
+                    <li><strong>The Service:</strong> The ball must be tossed at least 16cm straight up from an open palm and struck so it bounces once on your side, clears the net, and bounces on the opponent's side.</li>
+                    <li><strong>Scoring Points:</strong> Games are played up to 11 points. A player scores a point when the opponent fails to make a valid return.</li>
+                    <li><strong>Alternating Service:</strong> Service alternates between players every 2 points until the game ends or reaches a 10-10 deuce.</li>
+                </ul>
+                <h3>Standard Grip Styles</h3>
+                <p>Most players use either the <strong>Shakehand Grip</strong> (similar to shaking hands with the handle) or the <strong>Penhold Grip</strong> (holding the paddle like a pen), depending on their playstyle preferences.</p>
+            </div>
+        </section>
+
+        <!-- SUBTOPIC 2: Why It Is Beneficial -->
+        <section class="page" id="page2">
+            <h2>Why Table Tennis is Beneficial</h2>
+            <div class="content-box">
+                <h3>Physical & Mental Advantages</h3>
+                <ul>
+                    <li><strong>Cardiovascular Health:</strong> The fast paced nature of rallies spikes your heart rate, improving stamina and burning calories efficiently.</li>
+                    <li><strong>Joint Friendly Exercise:</strong> It offers excellent aerobic conditioning with minimal load on your knee and ankle joints.</li>
+                    <li><strong>Cognitive Sharpness:</strong> Tracking high speed spins forces fast decision making, which sharpens mental focus, reaction time, and spatial awareness.</li>
+                    <li><strong>Hand-Eye Coordination:</strong> Calculating velocity and timing counter attacks stimulates brain activity.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SUBTOPIC 3: Interactive Mini Game -->
+        <section class="page" id="page3">
+            <h2>Ping Pong Reflex Trainer</h2>
+            <p>Train Your Hand Eye Coordination and Reaction Speed! Click the fast moving ping pong ball before it changes direction.</p>
+
+            <div class="game-controls">
+                <button id="startBtn">Start Training</button>
+                <button id="resetBtn">Reset App</button>
+                <h3 id="scoreBox">Score: 0</h3>
+            </div>
+
+            <!-- Game Bound Container Box -->
+            <div id="gameBox">
+                <div id="ball"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Desktop QR Code Component -->
+    <div id="qrContainer">
+        <p>Scan to view Mobile App:</p>
+        <img src="images/qrcode.png" alt="Deployment QR Code">
+    </div>
+</body>
+</html>
