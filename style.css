@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/tabletennisbackground.png");
+    background-size: cover; /* Makes image cover the whole screen */
+    background-attachment: fixed; /* Keeps background still while scrolling */
+    background-position: center; /* Centers the background image */
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.page {
+    width: 85vw;
+    min-height: 70vh;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: none;
+}
+
+#page1 {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+#page2 {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+#page3 {
+    background-color: lightyellow;
+    color: saddlebrown;
+}
+
+.content-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+/* Navigation */
+nav {
+    background-color: gray;
+    text-align: center;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li button {
+        background: none;
+        border: none;
+        color: white;
+        padding: 15px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        nav ul li button:hover {
+            background-color: dimgray;
+        }
+
+
+#hamIcon {
+    display: none;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Breakpoints (800px Layout Shift) */
+@media screen and (max-width: 800px) {
+    nav ul li {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hamIcon {
+        display: block;
+    }
+
+    .menuShow {
+        display: block !important;
+    }
+
+    #qrContainer {
+        display: none !important; /* Hide QR code on mobile devices */
+    }
+}
+
+#gameBox {
+    width: 100%;
+    height: 400px;
+    background-color: forestgreen;
+    border: 4px solid white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+#ball {
+    background-image: url("images/ball.png");
+    background-size: cover; /* Ensures the image fills the 30px size */
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+/* QR Code Desktop Dock Configuration */
+#qrContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+    #qrContainer img {
+        width: 80px;
+        height: 80px;
+    }
