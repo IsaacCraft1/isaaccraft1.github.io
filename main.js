@@ -75,3 +75,17 @@ function ballCatch() {
 
 // Attach the click event listener to the ball
 ball.addEventListener("click", ballCatch);
+
+const btnFS = document.querySelector("#btnFS");
+const btnWS = document.querySelector("#btnWS");
+
+btnFS.addEventListener("click", enterFullscreen);
+btnWS.addEventListener("click", exitFullscreen);
+
+function enterFullscreen() {
+    document.documentElement.requestFullscreen();
+}
+
+function exitFullscreen() { 
+    document.exitFullscreen();
+}

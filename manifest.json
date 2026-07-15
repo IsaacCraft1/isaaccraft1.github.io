@@ -1,0 +1,15 @@
+{
+  "name": "Table Tennis Academy Reflex Trainer",
+  "short_name": "TT Trainer",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "whitesmoke",
+  "theme_color": "darkblue",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
