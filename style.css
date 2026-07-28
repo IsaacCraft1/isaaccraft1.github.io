@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("images/tabletennisbackground.png");
-    background-size: cover; /* Makes image cover the whole screen */
-    background-attachment: fixed; /* Keeps background still while scrolling */
-    background-position: center; /* Centers the background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header {
@@ -59,24 +59,23 @@ nav {
         padding: 0;
     }
 
-    nav ul li {
-        display: inline-block;
-    }
-
-    nav ul li button {
-        background: none;
-        border: none;
-        color: white;
-        padding: 15px 25px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-        nav ul li button:hover {
-            background-color: dimgray;
+        nav ul li {
+            display: inline-block;
         }
 
+            nav ul li button {
+                background: none;
+                border: none;
+                color: white;
+                padding: 15px 25px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+                nav ul li button:hover {
+                    background-color: dimgray;
+                }
 
 #hamIcon {
     display: none;
@@ -89,7 +88,7 @@ nav {
     cursor: pointer;
 }
 
-/* Responsive Breakpoints (800px Layout Shift) */
+/* Responsive Breakpoints */
 @media screen and (max-width: 800px) {
     nav ul li {
         display: block;
@@ -108,7 +107,7 @@ nav {
     }
 
     #qrContainer {
-        display: none !important; /* Hide QR code on mobile devices */
+        display: none !important;
     }
 }
 
@@ -138,8 +137,8 @@ nav {
     background-color: yellow;
     border-radius: 50%;
     position: absolute;
-    left: 135px; 
-    top: 300px; /* Starts on player side */
+    left: 135px;
+    top: 300px;
     cursor: pointer;
 }
 
@@ -160,71 +159,47 @@ nav {
         height: 160px;
     }
 
-
 #page4 {
     background-color: antiquewhite;
     color: purple;
 }
 
-/* Quiz Box Layout Styles */
-.quiz-question {
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 2px solid lightgray;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
-}
-
-    .quiz-question label {
-        display: inline-block;
-        margin: 6px 0;
-        cursor: pointer;
+    /* MCQ Quiz Styles */
+    #page4 fieldset {
+        margin-bottom: 15px;
+        padding: 10px 15px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s ease;
     }
 
-/* Dynamic Boundary Colors To Show Correct Or Wrong Quiz Answers */
-.correct-answer {
-    border-color: green !important;
-    background-color: green;
-}
+    #page4 legend {
+        font-weight: bold;
+        padding: 0 5px;
+    }
 
-.wrong-answer {
-    border-color: red !important;
-    background-color: green;
-}
-
-/* MCQ Quiz Styles */
-#page4 fieldset {
-    margin-bottom: 15px;
-    padding: 10px 15px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-}
-
-#page4 legend {
-    font-weight: bold;
-    padding: 0 5px;
-}
-
-/* Border feedback */
 .correct-field {
     border-color: lightgreen !important;
+    background-color: rgba(144, 238, 144, 0.2);
 }
 
 .wrong-field {
     border-color: lightcoral !important;
+    background-color: rgba(240, 128, 128, 0.2);
 }
 
-/* Page 3 */
+/* Page 3 History Timeline */
 #page3 h2 {
     font-size: 38px;
     margin-bottom: 10px;
+    color: red;
 }
 
 #page3 p {
     font-size: 20px;
+    color: lightgoldenrodyellow;
 }
 
-/* Outer Timeline Box */
 .timeline {
     position: relative;
     width: 80%;
@@ -233,7 +208,6 @@ nav {
     padding-left: 60px;
 }
 
-/* White Vertical Line */
 .timeline-line {
     position: absolute;
     left: 20px;
@@ -243,17 +217,15 @@ nav {
     background-color: white;
 }
 
-/* Individual Event Container */
 .timeline-item {
     position: relative;
-    margin-bottom: 80px; /* Separates the dots vertically */
+    margin-bottom: 80px;
     min-height: 40px;
 }
 
-/* Dot Thing On The Line */
 .dot {
     position: absolute;
-    left: -54px; /* Centers dot over vertical line */
+    left: -54px;
     top: 0;
     width: 36px;
     height: 36px;
@@ -265,22 +237,25 @@ nav {
     z-index: 2;
 }
 
-    /* Dot Hover Effect */
     .dot:hover {
         background-color: green;
     }
+
+        .dot:hover ~ .year-label {
+            display: inline-block;
+        }
 
 .year-label {
     display: none;
     font-size: 24px;
     font-weight: bold;
     color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 6px 14px;
     border-radius: 6px;
     margin-left: 10px;
 }
 
-/* Content box when clicked */
 .content {
     display: none;
     margin-top: 15px;
@@ -302,11 +277,3 @@ nav {
         line-height: 1.5;
         margin: 10px 0 0 0;
     }
-
-#page3 h2 {
-    color: red;
-}
-
-#page3 p {
-    color: lightgoldenrodyellow;
-}

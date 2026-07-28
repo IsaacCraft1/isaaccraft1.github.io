@@ -1,4 +1,3 @@
-
 // Target Page Switching Buttons
 const page1btn = document.querySelector("#page1btn");
 const page2btn = document.querySelector("#page2btn");
@@ -60,7 +59,9 @@ function enterFullscreen() {
 }
 
 function exitFullscreen() {
-    document.exitFullscreen();
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
 }
 
 // Table Tennis Game
@@ -108,7 +109,12 @@ function updateGame() {
         if (ballX >= mouseX - 30 && ballX <= mouseX + 30) {
             if (ballSpeedY > 0) { // Only bounce if moving down
 
-                bouncePOPSound.play();
+                if (bouncePOPSound) {
+                    bouncePOPSound.currentTime = 0;
+                    bouncePOPSound.play().catch(function (error) {
+                        // User interaction required before audio play
+                    });
+                }
 
                 gameScore = gameScore + 1;
                 scoreBox.innerHTML = "Score: " + gameScore;
@@ -214,7 +220,6 @@ function CheckAns() {
 function showContent(TimeLine) {
     var selectedContent = document.getElementById(TimeLine);
 
-    // Toggle display: if hidden, show it; if showing, hide it
     if (selectedContent.style.display === "block") {
         selectedContent.style.display = "none";
     } else {

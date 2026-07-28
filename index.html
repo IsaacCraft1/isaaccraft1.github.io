@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Mobile App Compatibility Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
@@ -18,7 +17,6 @@
     </header>
 
     <nav>
-        <!--menu buttons-->
         <button id="hamIcon">Open Menu</button>
         <ul>
             <li><button id="page1btn">How to Play</button></li>
@@ -26,11 +24,9 @@
             <li><button id="page3btn">History Of Table Tennis</button></li>
             <li><button id="page4btn">Take Quiz</button></li>
             <li><button id="page5btn">Minigame</button></li>
-
         </ul>
     </nav>
 
-    <!--info of table tennis-->
     <main id="pagecontainer">
         <section class="page" id="page1">
             <h2>How to Play Table Tennis</h2>
@@ -47,7 +43,7 @@
         <section class="page" id="page2">
             <h2>Why Table Tennis is Beneficial</h2>
             <div class="contentbox">
-                <h3>Physical & Mental Advantages</h3>
+                <h3>Physical &amp; Mental Advantages</h3>
                 <ul>
                     <li><strong>Cardiovascular Health:</strong> Spikes your heart rate and burns calories efficiently.</li>
                     <li><strong>Hand-Eye Coordination:</strong> Sharpens control and spatial tracking capabilities.</li>
@@ -63,7 +59,6 @@
             <div class="timeline">
                 <div class="timeline-line"></div>
 
-                <!-- Point 1: 1880s -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info1')" title="1880s"></div>
                     <span class="year-label">1880s</span>
@@ -73,7 +68,6 @@
                     </div>
                 </div>
 
-                <!-- Point 2: 1901 -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info2')" title="1901"></div>
                     <span class="year-label">1901</span>
@@ -83,7 +77,6 @@
                     </div>
                 </div>
 
-                <!-- Point 3: 1926 -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info3')" title="1926"></div>
                     <span class="year-label">1926</span>
@@ -93,7 +86,6 @@
                     </div>
                 </div>
 
-                <!-- Point 4: 1950s -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info4')" title="1950s"></div>
                     <span class="year-label">1950s</span>
@@ -103,7 +95,6 @@
                     </div>
                 </div>
 
-                <!-- Point 5: 1988 -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info5')" title="1988"></div>
                     <span class="year-label">1988</span>
@@ -113,7 +104,6 @@
                     </div>
                 </div>
 
-                <!-- Point 6: 2000s -->
                 <div class="timeline-item">
                     <div class="dot" onclick="showContent('info6')" title="2000s"></div>
                     <span class="year-label">2000s</span>
@@ -125,7 +115,6 @@
             </div>
         </section>
 
-        <!--quiz section-->
         <section class="page" id="page4">
             <h1>Table Tennis Quiz</h1>
 
@@ -160,33 +149,27 @@
             <button id="btnSubmit">Submit Quiz</button>
             <h3 id="scorebox">Not submitted</h3>
         </section>
+
+        <section class="page" id="page5">
+            <h2>How To Play Ping Pong Wall Trainer Minigame?</h2>
+            <h3>Keep Your Mouse Under The Dotted Lines Of The Table And When The Ball Comes Into Contact Of Your Mouse, It Will Bounce Back Up, How Far Can You Go?</h3>
+
+            <div class="game-controls">
+                <button id="btnFS">FullScreen</button>
+                <button id="btnWS">Exit Full Screen</button>
+                <h2 id="scoreBox">Score: 0</h2>
+            </div>
+
+            <div id="gameBox">
+                <div id="playerZoneLine"></div>
+                <div id="ball"></div>
+            </div>
+        </section>
     </main>
 
-    <!--qr code image for mobile version-->
     <div id="qrContainer">
         <p>Scan to view Mobile App:</p>
         <img src="images/qrcode.png" alt="Image Of QR Code For Easy Access To Phone Version">
     </div>
-
-    <!-- PAGE 5: Table Tennis MINIGAME -->
-    <section class="page" id="page5">
-        <h2>How To Play Ping Pong Wall Trainer Minigame?</h2>
-        <h3>Keep Your Mouse Under The Dotted Lines Of The Table And When The Ball Comes Into Contact Of Your Mouse, It Will Bounce Back Up, How Far Can You Go?</h3>
-
-        <div class="game-controls">
-            <button id="btnFS">FullScreen</button>
-            <button id="btnWS">Exit Full Screen</button>
-            <h2 id="scoreBox">Score: 0</h2>
-        </div>
-
-        <div id="gameBox">
-
-            <!-- Middle Line -->
-            <div id="playerZoneLine"></div>
-
-            <!-- Ball -->
-            <div id="ball"></div>
-        </div>
-    </section>
 </body>
 </html>
