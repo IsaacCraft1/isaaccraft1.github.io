@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Mobile App Compatibility Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <link rel="manifest" href="manifest.json">
-
     <title>Table Tennis Academy</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
@@ -19,14 +18,19 @@
     </header>
 
     <nav>
+        <!--menu buttons-->
         <button id="hamIcon">Open Menu</button>
         <ul>
             <li><button id="page1btn">How to Play</button></li>
             <li><button id="page2btn">Health Benefits</button></li>
-            <li><button id="page3btn">Reflex Trainer</button></li>
+            <li><button id="page3btn">History Of Table Tennis</button></li>
+            <li><button id="page4btn">Take Quiz</button></li>
+            <li><button id="page5btn">Minigame</button></li>
+
         </ul>
     </nav>
 
+    <!--info of table tennis-->
     <main id="pagecontainer">
         <section class="page" id="page1">
             <h2>How to Play Table Tennis</h2>
@@ -52,23 +56,137 @@
         </section>
 
         <section class="page" id="page3">
-            <h2>Ping Pong Reflex Trainer</h2>
+            <h2>History of Table Tennis</h2>
+            <p>Click a dot to reveal details</p>
+            <audio id="bouncePOPSound" src="audio/hit.mp3"></audio>
 
-            <div class="game-controls">
-                <button id="btnFS">FullScreen</button>
-                <button id="btnWS">Exit Full Screen</button>
+            <div class="timeline">
+                <div class="timeline-line"></div>
 
-                <h2 id="scoreBox">Score: 0</h2>
+                <!-- Point 1: 1880s -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info1')" title="1880s"></div>
+                    <span class="year-label">1880s</span>
+                    <div class="content" id="info1">
+                        <h3>1880s: Victorian Origins</h3>
+                        <p>Table tennis began as a makeshift upper class parlor game in England using rolled up books as nets and cigar box lids as bats.</p>
+                    </div>
+                </div>
+
+                <!-- Point 2: 1901 -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info2')" title="1901"></div>
+                    <span class="year-label">1901</span>
+                    <div class="content" id="info2">
+                        <h3>1901: The Ping Pong Name</h3>
+                        <p>Celluloid balls were introduced. The sound of the ball hitting wooden paddles led to the trademarked name Ping Pong.</p>
+                    </div>
+                </div>
+
+                <!-- Point 3: 1926 -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info3')" title="1926"></div>
+                    <span class="year-label">1926</span>
+                    <div class="content" id="info3">
+                        <h3>1926: Official Organization</h3>
+                        <p>The International Table Tennis Federation was formed and held the first World Championships in London.</p>
+                    </div>
+                </div>
+
+                <!-- Point 4: 1950s -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info4')" title="1950s"></div>
+                    <span class="year-label">1950s</span>
+                    <div class="content" id="info4">
+                        <h3>1950s: The Sponge Revolution</h3>
+                        <p>Sponge rubber rackets were introduced, creating high speeds and heavy spin that changed how the game was played globally.</p>
+                    </div>
+                </div>
+
+                <!-- Point 5: 1988 -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info5')" title="1988"></div>
+                    <span class="year-label">1988</span>
+                    <div class="content" id="info5">
+                        <h3>1988: Olympic Status</h3>
+                        <p>Table tennis made its debut as an official Olympic sport at the Seoul Games in South Korea.</p>
+                    </div>
+                </div>
+
+                <!-- Point 6: 2000s -->
+                <div class="timeline-item">
+                    <div class="dot" onclick="showContent('info6')" title="2000s"></div>
+                    <span class="year-label">2000s</span>
+                    <div class="content" id="info6">
+                        <h3>2000s: Modern Rule Changes</h3>
+                        <p>The ITTF increased ball size from 38mm to 40mm to slow down play for television audiences, and lowered winning game points from 21 down to 11.</p>
+                    </div>
+                </div>
             </div>
-            <div id="gameBox">
-                <div id="ball"></div>
-            </div>
+        </section>
+
+        <!--quiz section-->
+        <section class="page" id="page4">
+            <h1>Table Tennis Quiz</h1>
+
+            <fieldset id="q1-field">
+                <legend>1. How many points are required to win a standard game of table tennis?</legend>
+                <input type="radio" name="q1" value="21"> 21 points
+                <input type="radio" name="q1" value="11"> 11 points
+                <input type="radio" name="q1" value="15"> 15 points
+            </fieldset>
+
+            <fieldset id="q2-field">
+                <legend>2. During a valid service, how must the ball bounce?</legend>
+                <input type="radio" name="q2" value="Direct"> Directly onto opponent's side
+                <input type="radio" name="q2" value="Both"> Once on your side, clear net, then opponent's side
+                <input type="radio" name="q2" value="Any"> Any bounce is allowed
+            </fieldset>
+
+            <fieldset id="q3-field">
+                <legend>3. How frequently does service alternate between players?</legend>
+                <input type="radio" name="q3" value="5"> Every 5 points
+                <input type="radio" name="q3" value="1"> Every 1 point
+                <input type="radio" name="q3" value="2"> Every 2 points
+            </fieldset>
+
+            <fieldset id="q4-field">
+                <legend>4. Which benefit is gained by spatial tracking of the ball?</legend>
+                <input type="radio" name="q4" value="HandEye"> Hand-Eye Coordination
+                <input type="radio" name="q4" value="Muscle"> Muscle Mass
+                <input type="radio" name="q4" value="Lung"> Lung Capacity
+            </fieldset>
+
+            <button id="btnSubmit">Submit Quiz</button>
+            <h3 id="scorebox">Not submitted</h3>
         </section>
     </main>
 
+    <!--qr code image for mobile version-->
     <div id="qrContainer">
         <p>Scan to view Mobile App:</p>
-        <img src="images/qrcode.png" alt="Image Of QR Code For Easy Access To Phone Version ">
+        <img src="images/qrcode.png" alt="Image Of QR Code For Easy Access To Phone Version">
     </div>
+
+    <!-- PAGE 5: Table Tennis MINIGAME -->
+    <section class="page" id="page5">
+        <h2>How To Play Ping Pong Wall Trainer Minigame?</h2>
+        <h3>Keep Your Mouse Under The Dotted Lines Of The Table And When The Ball Comes Into Contact Of Your Mouse, It Will Bounce Back Up, How Far Can You Go?</h3>
+
+        <div class="game-controls">
+            <button id="btnFS">FullScreen</button>
+            <button id="btnWS">Exit Full Screen</button>
+            <h2 id="scoreBox">Score: 0</h2>
+        </div>
+
+        <div id="gameBox">
+
+            <!-- Middle Line -->
+            <div id="playerZoneLine"></div>
+
+            <!-- Ball -->
+            <div id="ball"></div>
+        </div>
+    </section>
 </body>
 </html>
