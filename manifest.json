@@ -5,11 +5,5 @@
   "display": "standalone",
   "background_color": "whitesmoke",
   "theme_color": "darkblue",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64",
-      "type": "image/x-icon"
-    }
   ]
 }
